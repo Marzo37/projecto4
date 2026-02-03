@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Reloj</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a class="navegador" href="#hora">Hora</a>
+                <a class="navegador" href="#temporizador">Temporizador</a>
+                <a class="navegador" href="#cronometro">Cronometro</a>
+                <a class="navegador" href="#alarma">Alarma</a>
+            </ul>
+        </nav>
+        <div id="select">
+        </div>
+    </header>
+    <main>
+        <section id="hora">
+            <div class="relojes">
+                <div class="hora">00:00:00</div>
+                <div class="fecha">Fecha</div>
+            </div>
+            <select name="zonaHoraria" id="zonaHoraria">
+                
+            </select>
+            
+        </section>
+        <section id="temporizador">
+            <div class="relojes">
+                <div class="temporizadorReloj">00:00:00</div>
+            </div>
+            <div class="botonesContainer">
+                <button class="botones pausarTemporizador" >Pausar</button>
+                <button class="botones detenerTemporizador" >Detener</button>
+            </div>
+            <div class="temporizadorBody">
+                <form action="post" id="addTemporizador">
+                    <input type="number" class="numberInput horasInput" placeholder="00" min="0" max="24" name="horas">
+                    <input type="number" class="numberInput minutosInput" placeholder="00" min="0" max="59" name="minutos">
+                    <input type="number" class="numberInput segundosInput" placeholder="00" min="0" max="59" name="segundos">
+                    <input type="submit" class="botones establecerTemporizador" value="Establecer Temporizador" >
+                </form>
+            </div>
+            <div class="temporizadorHistorial">
+                <h3>Temporizadores Guardados</h3>
+                <div class="temporizadorList">
+                    
+                </div>
+            </div>
+        </section>
+        <section id="cronometro">
+            <div class="cronometroHeader">
+                <div class="relojes">
+                    <div class="cronometroReloj">
+                        00:00:00:00
+                    </div>
+                </div>
+                <div class="botonesContainer">
+                    <button class="botones iniciarCronometro">Iniciar</button>
+                    <button class="botones pausarCronometro">Pausar</button>
+                    <button class="botones detenerCronometro">Detener</button>
+                    <button class="botones guardarCronometro">Guardar</button>
+                </div>
+            </div>
+            <div class="cronometroHistorial">
+                <h3>Historial de Cronometros</h3>
+                <div class="historialList">
+                </div>
+            </div>
+        </section>
+        <section id="alarma">
+            <div class="alarma">
+                <form action="post" id="addAlarma">
+                    <h2>Horas</h2>
+                    <div class="horas">
+                        <input type="number" class="numberInput horasInputAlarma" placeholder="00" min="0" max="23" name="horas">
+                        <input type="number" class="numberInput minutosInputAlarma" placeholder="00" min="0" max="59" name="minutos">
+                        <input type="number" class="numberInput segundosInputAlarma" placeholder="00" min="0" max="59" name="segundos">
+                    </div>
+                    <h2>Dias</h2>
+                    <div class="dias">
+                        <label for="lunes">LUNES</label>
+                        <input type="checkbox" class="diasCheckboxs" id="lunes" name="lunes">
+                        <label for="martes">MARTES</label>
+                        <input type="checkbox" class="diasCheckboxs" id="martes" name="martes">
+                        <label for="miercoles">MIRCOLES</label>
+                        <input type="checkbox" class="diasCheckboxs" id="miercoles" name="miercoles">
+                        <label for="jueves">JUEVES</label>
+                        <input type="checkbox" class="diasCheckboxs" id="jueves" name="jueves">
+                        <label for="viernes">VIERNES</label>
+                        <input type="checkbox" class="diasCheckboxs" id="viernes" name="viernes">
+                        <label for="sabado">SABADO</label>
+                        <input type="checkbox" class="diasCheckboxs" id="sabado" name="sabado">
+                        <label for="domingo">DOMINGO</label>
+                        <input type="checkbox" class="diasCheckboxs" id="domingo" name="domingo">
+                    </div>
+                    <input type="submit" class="botones establecerTemporizador" value="Establecer Alarma" >
+                </form>
+            </div>
+            <div id="historialAlarmas" >
+                <h3>Alarmas</h3>
+                <div id="listaAlarmas">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
